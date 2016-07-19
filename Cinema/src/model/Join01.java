@@ -14,6 +14,7 @@ public class Join01 {
 	private int psorder;
 	private String tname;
 	private int seatno;
+	
 	public int getBno() {
 		return bno;
 	}
