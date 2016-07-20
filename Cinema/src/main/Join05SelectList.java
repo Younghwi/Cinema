@@ -9,7 +9,7 @@ public class Join05SelectList {
 	public static void main(String[] args) {
 
 		System.out.println("영화이름,작성자 아이디,작성일자,한줄평 조회");
-		
+		//
 		Join05DAO jdao = new Join05DAO();
 		List<Join05> joinList = jdao.SelectDataList();
 		
