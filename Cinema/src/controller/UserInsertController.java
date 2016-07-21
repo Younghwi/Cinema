@@ -10,7 +10,7 @@ import model.UserBean;
 import model.UserDAO;
 import utility.Validator;
 
-public class usInsertController implements SuperController, Validator{
+public class UserInsertController implements SuperController, Validator{
 	private HttpServletRequest request ;
 	private UserBean bean = null ;
 		

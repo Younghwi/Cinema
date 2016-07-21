@@ -6,7 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class usListController implements SuperController{
+public class MovieListController implements SuperController{
 
 	@Override
 	public void doProcess(HttpServletRequest request, HttpServletResponse response)

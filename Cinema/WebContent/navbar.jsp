@@ -15,44 +15,49 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>DC BOX</title>
 
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type=text/css>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"
+	type=text/css>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top col-md-offset-1 col-md-10" role="navigation">
-  <div class="container-fluid">
-   
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">DC Box</a>
-    </div>
+	<nav
+		class="navbar navbar-default navbar-fixed-top col-md-offset-1 col-md-10"
+		role="navigation">
+	<div class="container-fluid">
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">예매하기</a></li>
-        <li><a href="#">영화</a></li>
-        <li><a href="#">영화관</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">만든이들</a></li>
-            <li><a href="#">도움주신분</a></li>
-            <li class="divider"></li>
-            <li><a href="#">테스트 뭐할까</a></li>
-          </ul>
-        </li>
-      </ul>
-      <!-- 
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">DC Box</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse"
+			id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">예매하기</a></li>
+				<li><a href="#">영화</a></li>
+				<li><a href="#">영화관</a></li>
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown">Contact <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#">만든이들</a></li>
+						<li><a href="#">도움주신분</a></li>
+						<li class="divider"></li>
+						<li><a href="#">테스트 뭐할까</a></li>
+					</ul></li>
+			</ul>
+			<!-- 
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
@@ -60,42 +65,59 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       -->
-      <ul class="nav navbar-nav navbar-right">
-        
-		<li><a href="UserInsertForm.jsp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle " data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
-         <ul id="login-dp" class="dropdown-menu">
-            <li>
-                <div class="row">
-                     <div class="col-md-12">
-                         <form class="form" method="post" action="<%=MyCtrlCommand%>" accept-charset="UTF-8" id="login-nav">
-                         <input type="hidden" name="command" value="meLogin">
-                              <div class="form-group">
-                                  <label class="sr-only" >ID</label>
-                                  <input type="text" class="form-control" size="20" placeholder="ID ENTER" required>
-                              </div>
-                              <div class="form-group">
-                                  <label class="sr-only" for="exampleInputPassword2">PW</label>
-                                  <input type="password" class="form-control" size="20" placeholder="PW ENTER" required>
-                              </div>
-                              <div class="form-group">
-                                  <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-                              </div>
-                         </form>
-                     </div>
-                     <div class="bottom text-center">
-                        <a href="#"><b>Join Us</b></a>
-                     </div>
-                </div>
-            </li>
-         </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-</div>
+			<ul class="nav navbar-nav navbar-right">
+
+				<c:if test="${empty sessionScope.loginfo}">
+					<li><a href="UserInsertForm.jsp"><span
+							class="glyphicon glyphicon-user"></span>Join Us</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle "
+						data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+						<ul id="login-dp" class="dropdown-menu">
+							<li>
+								<div class="row">
+									<div class="col-md-12">
+										<form class="form" method="post"
+											action="<%=MyCtrlCommand%>usLogin" accept-charset="UTF-8"
+											id="login-nav">
+											<input type="hidden" name="command" value="meLogin">
+											<div class="form-group">
+												<label class="sr-only">ID</label> <input type="text"
+													name = "id" class="form-control" size="20" placeholder="ID ENTER"
+													required>
+											</div>
+											<div class="form-group">
+												<label class="sr-only" for="exampleInputPassword2">PW</label>
+												<input type="password" name = "password" class="form-control" size="20"
+													placeholder="PW ENTER" required>
+											</div>
+											<div class="form-group">
+												<button type="submit" class="btn btn-primary btn-block">Sign
+													In</button>
+											</div>
+										</form>
+									</div>
+									<div class="bottom text-center">
+										<a href="#"><b>Join Us</b></a>
+									</div>
+								</div>
+							</li>
+						</ul></li>
+				</c:if>
+
+				<c:if test="${not empty sessionScope.loginfo}">
+					<li><a><span
+							class="glyphicon glyphicon-user"></span>${sessionScope.loginfo.name} (${sessionScope.loginfo.id}) 님 오신것을 환영합니다 </a></li>
+					<li><a href="<%=MyCtrlCommand%>usList"><span
+							class="glyphicon glyphicon-user"></span>마이페이지</a></li>
+					<li><a href="<%=MyCtrlCommand%>usLogout"><span
+							class="glyphicon glyphicon-user"></span>로그 아웃</a></li>
+				</c:if>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid --> </nav>
+	</div>
 
 
 </body>

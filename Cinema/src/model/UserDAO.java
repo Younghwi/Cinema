@@ -50,6 +50,48 @@ public class UserDAO extends SuperDAO{
       
       return userlist;
    }
+   
+   public UserBean SelectDataPK(String id) {
+	      PreparedStatement pstmt = null;
+	      ResultSet rs = null;
+	      String sql = " select * from users where id = ? ";
+	      UserBean bean = new UserBean();
+	      try {
+	         if (conn == null) {
+	            super.conn = super.getConnection();
+	         }
+	         pstmt = super.conn.prepareStatement(sql);
+	         pstmt.setString(1, id);
+	         
+	         rs = pstmt.executeQuery();
+	         while(rs.next()){
+	            bean.setId(rs.getString("id"));
+	            bean.setPassword(rs.getString("password"));
+	            bean.setName(rs.getString("name"));
+	            bean.setGender(rs.getString("gender"));
+	            bean.setBirth(String.valueOf(rs.getDate("birth")));
+	            bean.setAddress1(rs.getString("address1"));
+	            bean.setAddress2(rs.getString("address2"));
+	            bean.setPhone(rs.getString("phone"));
+	            bean.setPoint(rs.getInt("point"));
+	            bean.setGrade(rs.getString("grade"));
+	         }
+	         
+	      } catch (Exception e) {
+	         e.printStackTrace();
+	      } finally {
+	         try {
+	            if( rs != null ) rs.close();
+	            if( pstmt != null) pstmt.close();
+	            super.closeConnection();
+	         } catch (Exception e2) {
+	            e2.printStackTrace();
+	         }
+	      }
+	      
+	      
+	      return bean;
+	   }
 
    public int InsertUser(UserBean user) {
       PreparedStatement pstmt = null;
