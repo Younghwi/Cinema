@@ -45,11 +45,10 @@ public class FrontController extends HttpServlet implements SuperController{
 	/**
 	 * @see Servlet#init(ServletConfig)
 	 */
-	public void init(ServletConfig config) throws ServletException {
+	public void init() throws ServletException {
 		// TODO Auto-generated method stub
 		//configFile 초기화 파라미터 읽기
 				String configFile = getInitParameter("configFile");
-				
 				//스트림을 통하여 Properties 객체에 넣기
 				Properties prop = new Properties();
 				FileInputStream fis = null;

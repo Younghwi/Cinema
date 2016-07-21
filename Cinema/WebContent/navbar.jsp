@@ -15,20 +15,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>DC BOX</title>
 
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"
-	type=text/css>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type=text/css>
 <link href="bootstrap/css/justified-nav.css" rel="stylesheet">
-<script src="bootstrap/js/jquery.js" type="text/javascript"></script>
-<script src="bootstrap/js/jquery.min.js" type="text/javascript"></script>
-<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </head>
 <body>
-
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top col-md-offset-1 col-md-10" role="navigation">
   <div class="container-fluid">
    
     <div class="navbar-header">
@@ -51,59 +47,47 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
+            <li><a href="#">만든이들</a></li>
+            <li><a href="#">도움주신분</a></li>
             <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="#">테스트 뭐할까</a></li>
           </ul>
         </li>
       </ul>
+      <!-- 
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
+      -->
       <ul class="nav navbar-nav navbar-right">
-        <li><p class="navbar-text">Already have an account?</p></li>
-
+        
+		<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle " data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
          <ul id="login-dp" class="dropdown-menu">
             <li>
                 <div class="row">
                      <div class="col-md-12">
-                        Login via
-                        <div class="social-buttons">
-                           <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-                           <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
-                        </div>
-                                or
-                         <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                         <form class="form" method="post" action="<%=MyCtrlCommand%>" accept-charset="UTF-8" id="login-nav">
+                         <input type="hidden" name="command" value="meLogin">
                               <div class="form-group">
-                                  <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                  <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                  <label class="sr-only" >ID</label>
+                                  <input type="text" class="form-control" size="20" placeholder="ID ENTER" required>
                               </div>
                               <div class="form-group">
-                                  <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                  <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                             <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                                  <label class="sr-only" for="exampleInputPassword2">PW</label>
+                                  <input type="password" class="form-control" size="20" placeholder="PW ENTER" required>
                               </div>
                               <div class="form-group">
-                                  <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                              </div>
-                              <div class="checkbox">
-                                  <label>
-                                  <input type="checkbox"> keep me logged-in
-                                  </label>
+                                  <button type="submit" class="btn btn-primary btn-block">Sign In</button>
                               </div>
                          </form>
                      </div>
                      <div class="bottom text-center">
-                        New here ? <a href="#"><b>Join Us</b></a>
+                        <a href="#"><b>Join Us</b></a>
                      </div>
                 </div>
             </li>
@@ -113,6 +97,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+</div>
 
 
 </body>
