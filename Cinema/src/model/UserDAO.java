@@ -228,5 +228,42 @@ public class UserDAO extends SuperDAO{
 
       return cnt;
    }
+   
+   public List<Zipcode> SelectDataZipcode(String dong) {
+		PreparedStatement pstmt = null ;
+		ResultSet rs = null ;
+		String sql = "select * from zipcodes " ;
+		sql += " where dong like '" + dong + "%'" ;
+		sql += " order by sido asc, gugun asc, dong asc " ; 
+		List<Zipcode> lists = new ArrayList<Zipcode>();
+		try {
+			if( conn == null ){ super.conn = super.getConnection() ; }
+			pstmt = super.conn.prepareStatement(sql) ;			
+			 
+			rs = pstmt.executeQuery() ;			
+			while( rs.next() ){
+				Zipcode bean = new Zipcode();
+				bean.setSido( rs.getString("sido") );
+				bean.setBunji( rs.getString("bunji") );
+				bean.setDong( rs.getString("dong") );
+				bean.setGugun( rs.getString("gugun") );
+				bean.setZipcode( rs.getString("zipcode") );
+				bean.setSeqnum( Integer.parseInt( rs.getString("seqnum") ));
+				 
+				lists.add( bean ) ;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			try {
+				if( rs != null ){ rs.close(); }
+				if( pstmt != null ){ pstmt.close(); }
+				super.closeConnection(); 
+			} catch (Exception e2) {
+				e2.printStackTrace(); 
+			}
+		}		
+		return lists ;
+	}
 
 }

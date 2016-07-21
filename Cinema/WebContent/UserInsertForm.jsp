@@ -22,7 +22,7 @@
 			window.open(url, 'mywin', 'height=150,width=300') ;
 		}
 		function function2(  ){
-			var url='<%=MyCtrlCommand%>meZipcheck' ; 		
+			var url='<%=MyCtrlCommand%>usZipcheck' ; 		
 			window.open(url, 'mywin', 'height=600,width=720,status=yes,scrollbars=yes,resizable=no') ;			
 		}
 		function function3(  ){
