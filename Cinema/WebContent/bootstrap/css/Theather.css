@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+
+.ttmainimage {
+    position:relative;
+    float:left; /* optional */
+}
+
+.ttmainimage .ttmaintext {
+    position:absolute;
+    top:150px; /* in conjunction with left property, decides the text position */
+    left:100px;
+    width:1000px; /* optional, though better have one */
+    color: white;
+    font-weight: 900;
+}
+.theaterIMG{
+	 position:relative;
+	 left:250px;
+}
+.theatertext{	
+	color:#808080;
+	padding-bottom: 30px;
+}

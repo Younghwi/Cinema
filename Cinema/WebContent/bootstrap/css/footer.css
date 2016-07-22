@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+
+.imgset{	
+	position:relative;
+    float:left; /* optional */
+}
+
+.imgset .textset{
+    position:absolute;
+    top:0px;
+    left:200px;
+    width:1000px; 
+    color: white;
+    font-weight: 900;
+}
+
+.imgset .textset2{
+	position:absolute;
+    top:20px;
+    left:850px;
+    width:1000px; 
+    color: white;
+    font-weight: 900;
+}
+.bodyset{
+	background-color: #333333;
+}

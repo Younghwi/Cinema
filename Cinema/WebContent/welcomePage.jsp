@@ -28,7 +28,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox" align="center">
       <div class="item active">
-        <img src="./MovieImage/conjuring2_po.JPG" alt="컨저링">
+        <img src="./MovieImage/컨저링2_po.JPG" alt="컨저링">
       </div>
 
       <div class="item">
@@ -40,7 +40,7 @@
       </div>
 
       <div class="item">
-        <img src="./MovieImage/고령화가족_po.JPG" alt="고령화가족">
+        <img src="./MovieImage/부산행_po.JPG" alt="고령화가족">
       </div>
     </div>
 
