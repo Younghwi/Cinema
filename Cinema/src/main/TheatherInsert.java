@@ -13,6 +13,7 @@ public class TheatherInsert {
 		tbean.setStartseat(1);
 		tbean.setEndseat(10);
 		tbean.setPrice(30000);
+		tbean.setTimage("8");
 		
 		int cnt = -99999;
 		

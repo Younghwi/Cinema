@@ -27,6 +27,7 @@ public class TheatherDAO extends SuperDAO{
             tbean.setStartseat(rs.getInt("startseat"));
             tbean.setEndseat(rs.getInt("endseat"));
             tbean.setPrice(rs.getInt("price"));
+            tbean.setTimage(rs.getString("timage"));
             theatherslist.add(tbean);
 
          }
@@ -49,8 +50,8 @@ public class TheatherDAO extends SuperDAO{
 
    public int InsertTheather(TheatherBean Theather) {
       PreparedStatement pstmt = null;
-      String sql = " insert into theathers(tid, tname, startseat, endseat, price) ";
-      sql += " values(?,?,?,?,?) ";
+      String sql = " insert into theathers(tid, tname, startseat, endseat, price,timage) ";
+      sql += " values(?,?,?,?,?,?) ";
       
       int cnt = -99999;
       
@@ -65,6 +66,7 @@ public class TheatherDAO extends SuperDAO{
          pstmt.setInt(3, Theather.getStartseat());
          pstmt.setInt(4, Theather.getEndseat());
          pstmt.setInt(5, Theather.getPrice());
+         pstmt.setString(5, Theather.getTimage());
          
          cnt = pstmt.executeUpdate();
          super.conn.commit();
@@ -94,7 +96,7 @@ public class TheatherDAO extends SuperDAO{
          PreparedStatement pstmt = null;
          
          String sql = " Update Theathers set tname = ?, startseat = ?,"
-         		+ " endseat = ?, price = ? where tid = ? ";         
+         		+ " endseat = ?, price = ?, timage = ? where tid = ? ";         
          int cnt = -99999;
          
          try {
@@ -108,6 +110,7 @@ public class TheatherDAO extends SuperDAO{
           pstmt.setInt(2, Theather.getStartseat());
           pstmt.setInt(3, Theather.getEndseat());
           pstmt.setInt(4, Theather.getPrice());
+          pstmt.setString(1, Theather.getTimage());     
           pstmt.setInt(5, Theather.getTid());   
           
             cnt = pstmt.executeUpdate();

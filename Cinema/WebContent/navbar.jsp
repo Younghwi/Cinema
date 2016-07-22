@@ -34,7 +34,7 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top col-md-offset-1 col-md-10" role="navigation">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container-fluid">
 		<div class="navbar-header">
 		<a class="navbar-brand" href="main.jsp">DC Box</a>
