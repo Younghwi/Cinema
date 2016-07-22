@@ -41,13 +41,7 @@ function imgChange(flag){
 }
  
  function detailViewPopup() {
-	 var url='<%=MyCtrlCommand%>moDetail&mvid=flag';
-		window
-				.open(
-						url,
-						'mywin',
-						'height=600,width=720,menubar=nolocation=no,toolbar=no,status=no,scrollbars=no,resizable=no');
-
+	 location.href='<%=MyCtrlCommand%>booking';
 	}
 </script>
 </head>

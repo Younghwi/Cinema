@@ -4,7 +4,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<script type="text/javascript">
+function clickMovie(){
+	location.href='<%=MyCtrlCommand%>booking';
+}
+</script>
 <%
+
+
 	/* 	
 		if(id==null){
 			out.print("<script>");
@@ -22,7 +29,7 @@
 		<br>
 		<br>
 		<h1>영화 예매하자!</h1>
-		<form action="">
+		
 
 			<div class="row">
 				<div class="col-sm-4" style="background-color: lavender;">
@@ -31,9 +38,9 @@
 				<c:forEach var="bean" items="${requestScope.mlists}" varStatus="kkk">
 					
 					<td>
-						<input type="image" class="bookimage" src="./MovieImage/${bean.stringImage}_01.jpg" onclick="">
+						<input type="image" class="bookimage" src="./MovieImage/${bean.stringImage}_01.jpg" onclick="clickMovie();">
+						<button onclick="clickMovie();"> 버튼</button>
 					</td>
-					<c:out value="kkk">gg</c:out>
 					
 				</c:forEach>
 				</tr>
@@ -53,7 +60,7 @@
 				
 			</div>
 			<input type="submit" value="예매하기">
-		</form>
+		
 	</div>
 
 

@@ -45,7 +45,7 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="main.jsp">Home</a></li>
-				<li><a href="<%=MyCtrlCommand%>booking">예매하기</a></li>
+				<li><a href="<%=MyCtrlCommand%>bookingForm">예매하기</a></li>
 				<li><a href="<%=MyCtrlCommand%>moList">영화</a></li>
 				<li><a href="<%=MyCtrlCommand%>ttMain">영화관</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"

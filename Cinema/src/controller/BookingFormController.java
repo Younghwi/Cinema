@@ -19,11 +19,12 @@ public class BookingFormController implements SuperController{
 	@Override
 	public void doProcess(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("예매하기 페이지");
+		System.out.println("bookForm 페이지");
 		
+		//영화정보 불러들이기
 		MovieDAO mdao = new MovieDAO();
 		List<MovieBean> mlists = mdao.SelectDataList();
-		
+		//상영스케줄 불러들이기
 		PlayScheduleDAO psdao = new PlayScheduleDAO();
 		
 		//int mvid = Integer.parseInt(request.getParameter("mvid"));
@@ -36,7 +37,7 @@ public class BookingFormController implements SuperController{
 		HttpSession session = request.getSession();
 		session.setAttribute("bean", session);
 		
-		String url = "/book/Booking.jsp";
+		String url = "/book/BookingForm.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
 	}
