@@ -26,7 +26,7 @@
     </ol>
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox" align="center">
+    <div class="carousel-inner" role="listbox" align="center" >
       <div class="item active">
         <img src="./MovieImage/컨저링2_po.JPG" alt="컨저링">
       </div>

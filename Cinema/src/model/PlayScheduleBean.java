@@ -2,7 +2,7 @@ package model;
 
 public class PlayScheduleBean {
 	private int sno;
-	private int mvno;
+	private int mvid;
 	private int tid;
 	private String playdate;
 	private String starttime;
@@ -10,8 +10,8 @@ public class PlayScheduleBean {
 	public int getSno() {
 		return sno;
 	}
-	public int getMvno() {
-		return mvno;
+	public int getMvid() {
+		return mvid;
 	}
 	public int getTid() {
 		return tid;
@@ -28,8 +28,8 @@ public class PlayScheduleBean {
 	public void setSno(int sno) {
 		this.sno = sno;
 	}
-	public void setMvno(int mvno) {
-		this.mvno = mvno;
+	public void setMvid(int mvid) {
+		this.mvid = mvid;
 	}
 	public void setTid(int tid) {
 		this.tid = tid;
@@ -45,7 +45,7 @@ public class PlayScheduleBean {
 	}
 	@Override
 	public String toString() {
-		return "PlayScheduleBean [sno=" + sno + ", mvno=" + mvno + ", tid=" + tid + ", playdate=" + playdate
+		return "PlayScheduleBean [sno=" + sno + ", mvid=" + mvid + ", tid=" + tid + ", playdate=" + playdate
 				+ ", starttime=" + starttime + ", psorder=" + psorder + "]";
 	}
 

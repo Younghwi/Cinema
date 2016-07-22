@@ -3,6 +3,12 @@
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */ /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+.bookimage {
+	width: 100px;
+	height: 100px;
+}
+
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -3202,6 +3208,10 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
 	.has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label,
 	.has-error.radio-inline label {
 	color: #a94442
+}
+.err{
+	color: red;
+	
 }
 
 .has-error .form-control {

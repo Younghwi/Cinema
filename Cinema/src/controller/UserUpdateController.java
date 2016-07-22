@@ -10,7 +10,7 @@ import model.UserBean;
 import model.UserDAO;
 import utility.Validator;
 
-public class UserInsertController implements SuperController, Validator{
+public class UserUpdateController implements SuperController, Validator{
 	private HttpServletRequest request ;
 	private UserBean bean = null ;
 		
@@ -38,7 +38,7 @@ public class UserInsertController implements SuperController, Validator{
 
 		String url = "";
 		if ( this.validate() == false ) {
-			url = "/user/UserInsertForm.jsp";  
+			url = "/user/UserUpdateForm.jsp";  
 			this.request.setAttribute("bean", bean);
 		}else{
 			url = "/main.jsp";
@@ -46,7 +46,7 @@ public class UserInsertController implements SuperController, Validator{
 			UserDAO udao = new UserDAO();			
 			int cnt = -99999 ; 			
 			//Bean 객체를 이용하여 해당 게시물을 추가한다.
-			cnt = udao.InsertUser(bean) ;
+			cnt = udao.UpdateUser(bean) ;
 		}
 		System.out.println("어디널이야!2번" +  request.getAttribute("bean") );
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);

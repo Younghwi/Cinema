@@ -1,4 +1,4 @@
-<%@page import="model.UserBean"%>
+﻿<%@page import="model.UserBean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -107,7 +107,7 @@
 				<c:if test="${not empty sessionScope.loginfo}">
 					<li><a><span
 							class="glyphicon glyphicon-user"></span>${sessionScope.loginfo.name} (${sessionScope.loginfo.id}) 님 오신것을 환영합니다 </a></li>
-					<li><a href="<%=MyCtrlCommand%>usList"><span
+					<li><a href="<%=MyCtrlCommand%>usUpdateForm&id=${sessionScope.loginfo.id}"><span
 							class="glyphicon glyphicon-user"></span>마이페이지</a></li>
 					<li><a href="<%=MyCtrlCommand%>usLogout"><span
 							class="glyphicon glyphicon-user"></span>로그 아웃</a></li>

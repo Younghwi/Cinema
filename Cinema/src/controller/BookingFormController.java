@@ -14,7 +14,7 @@ import model.MovieDAO;
 import model.PlayScheduleBean;
 import model.PlayScheduleDAO;
 
-public class BookingController implements SuperController{
+public class BookingFormController implements SuperController{
 
 	@Override
 	public void doProcess(HttpServletRequest request, HttpServletResponse response)
