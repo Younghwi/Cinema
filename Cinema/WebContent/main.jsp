@@ -10,7 +10,6 @@
 <body>
 <br>
 <br><br>
-아영이네 오신걸 환영합니다
 <%@include file="./welcomePage.jsp" %>
 </body>
 </html>

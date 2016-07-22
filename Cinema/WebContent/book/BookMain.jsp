@@ -57,11 +57,13 @@ function imgChange(flag){
 <c:set var="count" value="1" />
 <c:forEach var="bean" items="${requestScope.lists}">
  <td>
- <img src="./MovieImage/${bean.stringImage}01.JPG" name="${bean.stringImage}" width=250 height=300 onMouseOver="imgChange(1);" onMouseOut="imgChange(2)" style="cursor:hand">
+ <img src="./MovieImage/${bean.stringImage}_01.jpg" name="${bean.stringImage}" width=250 height=300 onMouseOver="imgChange(1);" onMouseOut="imgChange(2)" style="cursor:hand">
  ${count }
  </td>
  <c:set var="count" value="${count+1 }" />
+<c:if test="count"></c:if>
 </c:forEach>
+ 
  </tr>
  <tr>
 <c:forEach var="bean" items="${requestScope.lists}">

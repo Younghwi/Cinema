@@ -15,7 +15,6 @@
 <body>
 
 <div class="container">
-  <h2>인기영화 4개</h2>
 
   <div id="myCarousel" class="carousel slide">
     <!-- Indicators -->
@@ -29,19 +28,19 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox" align="center">
       <div class="item active">
-        <img src="./MovieImage/conjuring2_po.JPG" alt="컨저링" width="50%" height="50%">
+        <img src="./MovieImage/conjuring2_po.JPG" alt="컨저링">
       </div>
 
       <div class="item">
-        <img src="./MovieImage/나우유씨미_po.JPG" alt="나우유씨미" width="50%" height="50%">
+        <img src="./MovieImage/나우유씨미2_po.JPG" alt="나우유씨미">
       </div>
     
       <div class="item">
-        <img src="./MovieImage/아이스에이지_po.JPG" alt="아이스에이지" width="50%" height="50%">
+        <img src="./MovieImage/아이스에이지_po.JPG" alt="아이스에이지">
       </div>
 
       <div class="item">
-        <img src="./MovieImage/고령화가족_po.JPG" alt="고령화가족" width="50%" height="50%">
+        <img src="./MovieImage/고령화가족_po.JPG" alt="고령화가족">
       </div>
     </div>
 
