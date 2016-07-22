@@ -18,11 +18,11 @@
 				document.myform.id.focus() ; 
 				return false ;
 			}
-			var url='<%=MyCtrlCommand%>meIdcheck&id=' + id ; 
+			var url='<%=MyCtrlCommand%>usIdCheck&id=' + id ; 
 			window.open(url, 'mywin', 'height=150,width=300') ;
 		}
 		function function2(  ){
-			var url='<%=MyCtrlCommand%>usZipcheck' ; 		
+			var url='<%=MyCtrlCommand%>usZipCheck' ; 		
 			window.open(url, 'mywin', 'height=600,width=720,status=yes,scrollbars=yes,resizable=no') ;			
 		}
 		function function3(  ){
@@ -49,7 +49,7 @@
 			</div>
 			<div class="panel-body sub_container">
 				<form id="myform" name="myform" class="form-horizontal" role="form" action="<%=MyCtrlByForm%>" method="post">
-					<input type="hidden" name="command" value="UserInsert">
+					<input type="hidden" name="command" value="usInsert">
 					<input type="hidden" name="isCheck" value="false">
 					<input type="hidden" name="point" value="500">
 					<div class="form-group">
