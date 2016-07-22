@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Bootstrap Example</title>
+  <title>Welcome Page</title>
   <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
@@ -29,19 +29,19 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox" align="center">
       <div class="item active">
-        <img src="./MovieImage/movie01.JPG" alt="아저씨01" width="10%" height="10%">
+        <img src="./MovieImage/conjuring2_po.JPG" alt="컨저링" width="50%" height="50%">
       </div>
 
       <div class="item">
-        <img src="./MovieImage/movie02.JPG" alt="아저씨02" width="10%" height="10%">
+        <img src="./MovieImage/나우유씨미_po.JPG" alt="나우유씨미" width="50%" height="50%">
       </div>
     
       <div class="item">
-        <img src="./MovieImage/jungle01.JPG" alt="정글북" width="10%" height="10%">
+        <img src="./MovieImage/아이스에이지_po.JPG" alt="아이스에이지" width="50%" height="50%">
       </div>
 
       <div class="item">
-        <img src="./MovieImage/conjuring201.JPG" alt="컨저링2" width="10%" height="10%">
+        <img src="./MovieImage/고령화가족_po.JPG" alt="고령화가족" width="50%" height="50%">
       </div>
     </div>
 

@@ -34,7 +34,7 @@ public class UserInsertController implements SuperController, Validator{
 		}
 		bean.setGrade(request.getParameter("grade"));
 
-		System.out.println( bean );
+		System.out.println("어디널이야!1번" + bean );
 
 		String url = "";
 		if ( this.validate() == false ) {
@@ -48,7 +48,7 @@ public class UserInsertController implements SuperController, Validator{
 			//Bean 객체를 이용하여 해당 게시물을 추가한다.
 			cnt = udao.InsertUser(bean) ;
 		}
-		System.out.println( request.getAttribute("bean") );
+		System.out.println("어디널이야!2번" +  request.getAttribute("bean") );
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(this.request, response);		
 	}

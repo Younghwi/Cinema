@@ -46,7 +46,7 @@
 			document.myform.dong.focus() ; 
 			return false ;
 		}
-		var url='<%=MyCtrlCommand%>usZipcheck' ; 
+		var url='<%=MyCtrlCommand%>usZipCheck' ; 
 		window.open(url, 'mywin', 'height=150,width=300') ;
 	}
 </script>
@@ -57,7 +57,7 @@
 			<div class="panel-heading">우편 번호 검색</div>
 			<div class="panel-body">
 				<form name="myform" class="form-inline" role="form" method="post" action="<%=MyCtrlByForm%>" >
-					<input type="hidden" name="command" value="usZipcheck">
+					<input type="hidden" name="command" value="usZipCheck">
 					<table class="table table-striped table-hover table-condensed">
 						<tr>
 							<td colspan="2" align="center">

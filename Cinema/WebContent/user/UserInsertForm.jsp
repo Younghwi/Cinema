@@ -45,7 +45,7 @@
 		<h2>회원 가입 하기</h2>
 		<div class="panel panel-primary sub_container">
 			<div class="panel-heading" align="left">
-				<font color="red"><b>회원 가입</b></font> 페이지입니다.
+				<font color="white	"><b>회원 가입</b></font> 페이지입니다.
 			</div>
 			<div class="panel-body sub_container">
 				<form id="myform" name="myform" class="form-horizontal" role="form" action="<%=MyCtrlByForm%>" method="post">
@@ -89,6 +89,13 @@
 							<span class="form-control-static err">${errgender}</span>
 	        			</div>
 	        		</div>
+	        			<div class="form-group">							
+						<label for="birth" class="col-xs-<%=formleft%> col-lg-<%=formleft%> control-label">생년월일</label>
+	        			<div class="col-xs-<%=formright%> col-lg-<%=formright%>">
+	            			<input type="date" name="birth" id="birth" class="form-control" placeholder="생년월일" value="1990-01-01">
+	            			<span class="err">${errbirth}</span> 
+	        			</div>
+	        		</div>
 					<div class="form-group">
 						<label for="zipcode" class="col-xs-<%=formleft%> col-lg-<%=formleft%> control-label">우편 번호</label>
 	        			<div class="col-xs-<%=formright-2%> col-lg-<%=formright-2%>">
@@ -98,15 +105,31 @@
 						<div class="col-xs-<%=2%> col-lg-<%=2%>" align="left">
 	            			<input type="button" class="btn btn-info" value="우편 번호 찾기" onclick="function2( );"> 
 	        			</div>
-	        			<span class="err">${erraddress1}</span>	        			
+	        			<span class="err">${errzipcode}</span>	        			
 	        		</div> 
+	        		<div class="form-group">
+						<label for="address1" class="col-xs-<%=formleft%> col-lg-<%=formleft%> control-label">주소</label>
+	        			<div class="col-xs-<%=formright%> col-lg-<%=formright%>">
+	            		    <input type="text" name="fakeaddress1" id="fakeaddress1" class="form-control" disabled="disabled" placeholder="주소" value="" >
+	            			<input type="hidden" name="address1" id="address1" value="" >
+	            			<span class="err">${erraddress1}</span> 
+	        			</div>
+	        		</div>
 					<div class="form-group">
 						<label for="address2" class="col-xs-<%=formleft%> col-lg-<%=formleft%> control-label">세부 주소</label>
 	        			<div class="col-xs-<%=formright%> col-lg-<%=formright%>">
-	            			<input type="text" name="address2" id="address2" class="form-control" placeholder="주소" value="주소를 입력해주세요.">
+	            			<input type="text" name="address2" id="address2" class="form-control" placeholder="주소를 상세하게 입력해주세요." value="">
 	            			<span class="err">${erraddress2}</span> 
 	        			</div>
 	        		</div>
+	        		<div class="form-group">
+						<label for="phone" class="col-xs-<%=formleft%> col-lg-<%=formleft%> control-label">전화번호</label>
+	        			<div class="col-xs-<%=formright%> col-lg-<%=formright%>">
+	            			<input type="text" name="phone" id="phone" class="form-control" placeholder="010-1234-5678 형식으로 입력해주세요." value="">
+	            			<span class="err">${errphone}</span> 
+	        			</div>
+	        		</div>
+	        			<input type="hidden" name="grade" id="grade" value="일반">
 					<div class="form-group">
 						<div class="col-xs-<%=12%> col-lg-<%=12%>" align="center">
 							<button type="submit" class="btn btn-default" onclick="return checkForm();"><b>회원 가입</b></button>
