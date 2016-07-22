@@ -15,6 +15,9 @@ public class BookingController implements SuperController{
 			throws ServletException, IOException {
 		System.out.println("예매하기 페이지");
 		
+		
+		
+		
 		HttpSession session = request.getSession();
 		session.setAttribute("bean", session);
 		

@@ -34,21 +34,19 @@
 
 </head>
 <body>
-	<nav
-		class="navbar navbar-default navbar-fixed-top col-md-offset-1 col-md-10"
-		role="navigation">
+	<nav class="navbar navbar-default navbar-fixed-top col-md-offset-1 col-md-10" role="navigation">
 	<div class="container-fluid">
-
 		<div class="navbar-header">
-			<a class="navbar-brand" href="#">DC Box</a>
+		<a class="navbar-brand" href="main.jsp">DC Box</a>
+		<!--  <a href="main.jsp"><img src="./Images/logo03.png" width="7%" height="7%"></a> -->
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="main.jsp">Home</a></li>
-				<li><a href="<%=MyCtrlCommand%>bkMain">예매하기</a></li>
-				<li><a href="<%=MyCtrlCommand%>moMain">영화</a></li>
+				<li><a href="<%=MyCtrlCommand%>booking">예매하기</a></li>
+				<li><a href="<%=MyCtrlCommand%>moList">영화</a></li>
 				<li><a href="<%=MyCtrlCommand%>ttMain">영화관</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Contact <span class="caret"></span></a>
