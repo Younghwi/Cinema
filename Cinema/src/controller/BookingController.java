@@ -1,28 +1,27 @@
 package controller;
+
 import java.io.IOException;
-import java.util.List;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import model.UserDAO;
-import model.Zipcode;
+public class BookingController implements SuperController{
 
-public class UserZipcheckController implements SuperController{
 	@Override
 	public void doProcess(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String dong = request.getParameter("dong") ;
-		List<Zipcode>  lists = null ;
-		UserDAO udao = new UserDAO() ;
-		if ( dong != null ) {
-			lists = udao.SelectDataZipcode(dong) ;
-			System.out.println( "동네 수: " + lists.size() );
-		}		 
-		request.setAttribute( "lists", lists );
-		String url = "/user/zipCheck.jsp";  
+		System.out.println("예매하기 페이지");
+		
+		HttpSession session = request.getSession();
+		session.setAttribute("bean", session);
+		
+		String url = "/book/Booking.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
 	}
+
+	
 }

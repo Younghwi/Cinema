@@ -6,6 +6,7 @@ public class UserBean {
 	private String name;		//회원 이름
 	private String gender;		//회원 성별
 	private String birth;		//회원 생년월일 date이지만 string으로
+	private String zipcode ;	//우편번호 추가
 	private String address1;	//주소 1
 	private String address2;	//주소 2
 	private String phone;	//핸드폰 번호
@@ -27,6 +28,9 @@ public class UserBean {
 	}
 	public String getBirth() {
 		return birth;
+	}
+	public String getZipcode() {
+		return zipcode;
 	}
 	public String getAddress1() {
 		return address1;
@@ -60,6 +64,9 @@ public class UserBean {
 	public void setBirth(String birth) {
 		this.birth = birth;
 	}
+	public void setZipcode(String zipcode) {
+		this.zipcode = zipcode;
+	}
 	public void setAddress1(String address1) {
 		this.address1 = address1;
 	}
@@ -78,8 +85,10 @@ public class UserBean {
 	
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", password=" + password + ", name=" + name + ", gender=" + gender + ", birth="
-				+ birth + ", address1=" + address1 + ", address2=" + address2 + ", phone=" + phone + ", point="
-				+ point + ", grade=" + grade + "]";
+		return "UserBean [id=" + id + ", password=" + password + ", name=" + name + ", gender=" + gender + ", birth="
+				+ birth + ", zipcode=" + zipcode + ", address1=" + address1 + ", address2=" + address2 + ", phone="
+				+ phone + ", point=" + point + ", grade=" + grade + "]";
 	}
+	
+
 }

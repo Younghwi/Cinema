@@ -13,6 +13,7 @@ public class UserInsert {
 		user.setName("고스트");
 		user.setGender("남자");
 		user.setBirth("19000101");
+		user.setZipcode("111-111");
 		user.setAddress1("서울시");
 		user.setAddress2("강남구");
 		user.setPhone("01012345678");

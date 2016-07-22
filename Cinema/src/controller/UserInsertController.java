@@ -25,6 +25,7 @@ public class UserInsertController implements SuperController, Validator{
 		bean.setName(request.getParameter("name"));
 		bean.setGender(request.getParameter("gender"));
 		bean.setBirth(request.getParameter("birth"));
+		bean.setZipcode(request.getParameter("zipcode"));
 		bean.setAddress1(request.getParameter("address1"));
 		bean.setAddress2(request.getParameter("address2"));
 		bean.setPhone(request.getParameter("phone"));
@@ -40,7 +41,7 @@ public class UserInsertController implements SuperController, Validator{
 			url = "/user/UserInsertForm.jsp";  
 			this.request.setAttribute("bean", bean);
 		}else{
-			url = "/user/UserLoginForm.jsp";
+			url = "/main.jsp";
 			//DAO 객체를 생성한다.
 			UserDAO udao = new UserDAO();			
 			int cnt = -99999 ; 			

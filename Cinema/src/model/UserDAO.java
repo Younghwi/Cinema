@@ -27,6 +27,7 @@ public class UserDAO extends SuperDAO{
             bean.setName(rs.getString("name"));
             bean.setGender(rs.getString("gender"));
             bean.setBirth(String.valueOf(rs.getDate("birth")));
+            bean.setZipcode(rs.getString("zipcode"));
             bean.setAddress1(rs.getString("address1"));
             bean.setAddress2(rs.getString("address2"));
             bean.setPhone(rs.getString("phone"));
@@ -55,21 +56,23 @@ public class UserDAO extends SuperDAO{
 	      PreparedStatement pstmt = null;
 	      ResultSet rs = null;
 	      String sql = " select * from users where id = ? ";
-	      UserBean bean = new UserBean();
+	      UserBean bean = null ;
 	      try {
 	         if (conn == null) {
-	            super.conn = super.getConnection();
+	            this.conn = this.getConnection();
 	         }
-	         pstmt = super.conn.prepareStatement(sql);
+	         pstmt = this.conn.prepareStatement(sql);
 	         pstmt.setString(1, id);
-	         
 	         rs = pstmt.executeQuery();
-	         while(rs.next()){
+	         
+	         if(rs.next()){
+            	bean = new UserBean() ;
 	            bean.setId(rs.getString("id"));
 	            bean.setPassword(rs.getString("password"));
 	            bean.setName(rs.getString("name"));
 	            bean.setGender(rs.getString("gender"));
 	            bean.setBirth(String.valueOf(rs.getDate("birth")));
+	            bean.setZipcode(rs.getString("zipcode"));
 	            bean.setAddress1(rs.getString("address1"));
 	            bean.setAddress2(rs.getString("address2"));
 	            bean.setPhone(rs.getString("phone"));
@@ -95,8 +98,8 @@ public class UserDAO extends SuperDAO{
 
    public int InsertUser(UserBean user) {
       PreparedStatement pstmt = null;
-      String sql = " insert into users(id, password, name, gender, birth, address1, address2, phone, point, grade) ";
-      sql += " values(?,?,?,?,?,?,?,?,?,?) ";
+      String sql = " insert into users(id, password, name, gender, birth, zipcode, address1, address2, phone, point, grade) ";
+      sql += " values(?,?,?,?,?,?,?,?,?,?,?) ";
       
       int cnt = -99999;
       
@@ -111,11 +114,12 @@ public class UserDAO extends SuperDAO{
          pstmt.setString(3, user.getName());
          pstmt.setString(4, user.getGender());
          pstmt.setString(5, user.getBirth());
-         pstmt.setString(6, user.getAddress1());
-         pstmt.setString(7, user.getAddress2());
-         pstmt.setString(8, user.getPhone());
-         pstmt.setInt(9, user.getPoint());
-         pstmt.setString(10, user.getGrade());
+         pstmt.setString(6, user.getZipcode());
+         pstmt.setString(7, user.getAddress1());
+         pstmt.setString(8, user.getAddress2());
+         pstmt.setString(9, user.getPhone());
+         pstmt.setInt(10, user.getPoint());
+         pstmt.setString(11, user.getGrade());
          
          cnt = pstmt.executeUpdate();
          super.conn.commit();
@@ -145,7 +149,7 @@ public class UserDAO extends SuperDAO{
    public int UpdateUser(UserBean user){
       PreparedStatement pstmt = null;
       
-      String sql = " Update users set password = ?, name = ?, gender = ?, birth = ?, ";
+      String sql = " Update users set password = ?, name = ?, gender = ?, birth = ?, zipcode = ?, ";
       sql+= " address1 = ?, address2 = ?, phone = ?, point = ?, grade = ? where id = ? ";
       int cnt = -99999;
       
@@ -160,12 +164,13 @@ public class UserDAO extends SuperDAO{
          pstmt.setString(2, user.getName());
          pstmt.setString(3, user.getGender());
          pstmt.setString(4, user.getBirth());
-         pstmt.setString(5, user.getAddress1());
-         pstmt.setString(6, user.getAddress2());
-         pstmt.setString(7, user.getPhone());
-         pstmt.setInt(8, user.getPoint());
-         pstmt.setString(9, user.getGrade());
-         pstmt.setString(10, user.getId());
+         pstmt.setString(5, user.getZipcode());
+         pstmt.setString(6, user.getAddress1());
+         pstmt.setString(7, user.getAddress2());
+         pstmt.setString(8, user.getPhone());
+         pstmt.setInt(9, user.getPoint());
+         pstmt.setString(10, user.getGrade());
+         pstmt.setString(11, user.getId());
          
          cnt = pstmt.executeUpdate();
          super.conn.commit();
@@ -265,5 +270,6 @@ public class UserDAO extends SuperDAO{
 		}		
 		return lists ;
 	}
+
 
 }
