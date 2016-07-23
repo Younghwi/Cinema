@@ -6,7 +6,7 @@ import model.Join03DAO;
 
 public class Join03SelectList {
 	public static void main(String[] args) {
-		System.out.println("상영관, 예매영화, 상영일자, 상영시간, 상영회차 조회");
+		System.out.println("상영관, 예매영화, 상영일자, 상영시간, 상영회차 조회, 시작좌석, 끝좌석");
 		
 		Join03DAO jdao = new Join03DAO();
 		List<Join03> joinList = jdao.SelectDataList();

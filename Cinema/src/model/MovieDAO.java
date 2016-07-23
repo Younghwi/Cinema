@@ -195,4 +195,48 @@ public class MovieDAO extends SuperDAO{
 		return cnt;
 	}
 
+	public MovieBean SelectDataPK(int mvid) {
+			PreparedStatement pstmt = null ;
+			ResultSet rs = null ;				
+			String sql = "select * " ;
+			sql += " from movies " ; 
+			sql += " where mvid = ? " ;
+			MovieBean bean = null ;
+			try {
+				if( this.conn == null ){ this.conn = this.getConnection() ; }			
+				pstmt = this.conn.prepareStatement(sql) ;			
+				//placehodelr 치환은 반드시 execute 메소드 실행 바로 직전에 하세요. 
+				pstmt.setInt( 1, mvid ); 
+				rs = pstmt.executeQuery() ; 
+				
+				if ( rs.next() ) {
+					bean = new MovieBean() ;
+					bean.setMvid(rs.getInt("mvid"));
+					bean.setMname(rs.getString("mname"));
+					bean.setOpendate(String.valueOf(rs.getDate("opendate")));
+					bean.setDirector(rs.getString("director"));
+					bean.setGenre(rs.getString("genre"));
+					bean.setPlayingtime(rs.getInt("playingtime"));
+					bean.setStory(rs.getString("story"));
+					bean.setRating(rs.getString("rating"));
+					bean.setDistributor(rs.getString("distributor"));
+					bean.setActor(rs.getString("actor"));
+					bean.setCondition(rs.getInt("condition"));
+					bean.setStringImage(rs.getString("image"));
+				}
+				
+			} catch (SQLException e) {			
+				e.printStackTrace();
+			} finally{
+				try {
+					if( rs != null){ rs.close(); } 
+					if( pstmt != null){ pstmt.close(); } 
+					this.closeConnection() ;
+				} catch (Exception e2) {
+					e2.printStackTrace(); 
+				}
+			} 		
+			return bean  ;
+	}
+
 }

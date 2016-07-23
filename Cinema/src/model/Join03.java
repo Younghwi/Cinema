@@ -8,14 +8,24 @@ public class Join03 {
 		
 	private String tname;
 	private String mname;
+	private int mvid;
 	private String playdate;
 	private String starttime ;
 	private int psorder ;
+	private int startseat;
+	private int endseat;
+	
 	public String getTname() {
 		return tname;
 	}
 	public void setTname(String tname) {
 		this.tname = tname;
+	}
+	public int getMvid() {
+		return mvid;
+	}
+	public void setMvid(int mvid) {
+		this.mvid = mvid;
 	}
 	public String getMname() {
 		return mname;
@@ -41,11 +51,24 @@ public class Join03 {
 	public void setPsorder(int psorder) {
 		this.psorder = psorder;
 	}
+	public int getStartseat() {
+		return startseat;
+	}
+	public void setStartseat(int startseat) {
+		this.startseat = startseat;
+	}
+	public int getEndseat() {
+		return endseat;
+	}
+	public void setEndseat(int endseat) {
+		this.endseat = endseat;
+	}
 	@Override
 	public String toString() {
-		return "Join03 [tname=" + tname + ", mname=" + mname + ", playdate=" + playdate + ", starttime=" + starttime
-				+ ", psorder=" + psorder + "]";
+		return "Join03 [tname=" + tname + ", mname=" + mname + ", mvid=" + mvid + ", playdate=" + playdate
+				+ ", starttime=" + starttime + ", psorder=" + psorder + ", startseat=" + startseat + ", endseat="
+				+ endseat + "]";
 	}
-	
+
 }
 	
