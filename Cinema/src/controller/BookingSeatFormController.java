@@ -23,7 +23,9 @@ public class BookingSeatFormController implements SuperController{
 		
 		int row = Integer.parseInt(request.getParameter("row"));
 		int col = Integer.parseInt(request.getParameter("col"));
+		int price = Integer.parseInt(request.getParameter("price"));
 		
+		request.setAttribute("price", price);
 		request.setAttribute("row", row);
 		request.setAttribute("col", col);
 		

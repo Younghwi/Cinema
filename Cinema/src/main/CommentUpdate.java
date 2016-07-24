@@ -16,7 +16,7 @@ public class CommentUpdate {
 			comment.setMvid(1);
 			comment.setComments("ぞ ぞ ぞ ぞ");
 			comment.setWritedate("16/07/05");
-			comment.setStartpoint(3);
+			comment.setStarpoint(3);
 			
 	      int cnt = -99999;
 	      

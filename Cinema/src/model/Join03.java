@@ -14,6 +14,7 @@ public class Join03 {
 	private int psorder ;
 	private int startseat;
 	private int endseat;
+	private int price;
 	
 	public String getTname() {
 		return tname;
@@ -63,12 +64,19 @@ public class Join03 {
 	public void setEndseat(int endseat) {
 		this.endseat = endseat;
 	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
 	@Override
 	public String toString() {
 		return "Join03 [tname=" + tname + ", mname=" + mname + ", mvid=" + mvid + ", playdate=" + playdate
 				+ ", starttime=" + starttime + ", psorder=" + psorder + ", startseat=" + startseat + ", endseat="
-				+ endseat + "]";
+				+ endseat + ", price=" + price + "]";
 	}
 
+	
 }
 	

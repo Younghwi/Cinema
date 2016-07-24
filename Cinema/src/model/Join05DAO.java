@@ -49,14 +49,14 @@ public class Join05DAO extends SuperDAO {
 		return joinlist;
 	}
 	
-	public List<Join05> SelectDataList(String mname) {
+	public List<Join05> SelectDataList(int mvid) {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 
-		String sql = " select  m.mname, c.mid, c.writedate, c.comments ";
+		String sql = " select  m.mname, c.mid, c.writedate, c.comments, c.starpoint";
 		sql += " from movies m inner join comments c ";
 		sql += " on m.mvid = c.mvid ";
-		sql += " and m.mname = ? ";
+		sql += " and m.mvid = ? ";
 		
 		List<Join05> joinlist = new ArrayList<Join05>();
 
@@ -65,7 +65,7 @@ public class Join05DAO extends SuperDAO {
 				super.conn = super.getConnection();
 			}
 			pstmt = super.conn.prepareStatement(sql);
-			pstmt.setString(1, mname);
+			pstmt.setInt(1, mvid);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				Join05 bean = new Join05();
@@ -73,6 +73,7 @@ public class Join05DAO extends SuperDAO {
 				bean.setMname(rs.getString("mname"));
 				bean.setWritedate(String.valueOf(rs.getDate("writedate")));
 				bean.setComments(rs.getString("comments"));
+				bean.setStarpoint(rs.getInt("starpoint"));
 				joinlist.add(bean);
 			}
 

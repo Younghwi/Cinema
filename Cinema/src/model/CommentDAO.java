@@ -27,8 +27,8 @@ public class CommentDAO extends SuperDAO {
 		            bean.setMid(rs.getString("mid"));
 		            bean.setMvid(rs.getInt("mvid"));
 		            bean.setComments(rs.getString("comments"));
-		            bean.setWritedate(rs.getString("writedate"));
-		            bean.setStartpoint(rs.getInt("startpoint"));
+		            bean.setWritedate(String.valueOf(rs.getDate("writedate")));
+		            bean.setStarpoint(rs.getInt("starpoint"));
 
 		      
 		    	   commentlist.add(bean);
@@ -54,8 +54,8 @@ public class CommentDAO extends SuperDAO {
 
 	   public int InsertComment(CommentBean comment) {
 	      PreparedStatement pstmt = null;
-	      String sql = " insert into comments(cno, mid, mvid, comments, writedate, startpoint) ";
-	      sql += " values(?,?,?,?,?,?) ";
+	      String sql = " insert into comments(cno, mid, mvid, comments, writedate, starpoint) ";
+	      sql += " values(commentseq.nextval,?,?,?,?,?) ";
 	      
 	      int cnt = -99999;
 	      
@@ -65,12 +65,11 @@ public class CommentDAO extends SuperDAO {
 	         super.conn.setAutoCommit(false);
 	         
 	         pstmt = super.conn.prepareStatement(sql);
-	         pstmt.setInt(1, comment.getCno());
-	         pstmt.setString(2, comment.getMid());
-	         pstmt.setInt(3, comment.getMvid());
-	         pstmt.setString(4, comment.getComments());
-	         pstmt.setString(5, comment.getWritedate());
-	         pstmt.setInt(6, comment.getStartpoint());
+	         pstmt.setString(1, comment.getMid());
+	         pstmt.setInt(2, comment.getMvid());
+	         pstmt.setString(3, comment.getComments());
+	         pstmt.setString(4, comment.getWritedate());
+	         pstmt.setInt(5, comment.getStarpoint());
 	         
 	         cnt = pstmt.executeUpdate();
 	         super.conn.commit();
@@ -117,7 +116,7 @@ public class CommentDAO extends SuperDAO {
 	         pstmt.setInt(2, comment.getMvid());
 	         pstmt.setString(3, comment.getComments());
 	         pstmt.setString(4, comment.getWritedate());
-	         pstmt.setInt(5, comment.getStartpoint());
+	         pstmt.setInt(5, comment.getStarpoint());
 	         pstmt.setInt(6, comment.getCno());
 
 	         cnt = pstmt.executeUpdate();

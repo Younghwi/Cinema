@@ -19,6 +19,8 @@
 	}else{
 		whologin = 1;
 	}
+	
+	session.setAttribute("whologin", whologin);
 			
 	
 %>
@@ -107,6 +109,10 @@
 				<c:if test="${not empty sessionScope.loginfo}">
 					<li><a><span
 							class="glyphicon glyphicon-user"></span>${sessionScope.loginfo.name} (${sessionScope.loginfo.id}) 님 오신것을 환영합니다 </a></li>
+					<c:if test="${whologin == 2}">
+					<li><a href="<%=MyCtrlCommand%>adminPage"><span
+							class="glyphicon glyphicon-user"></span>관리자페이지</a></li>
+					</c:if>
 					<li><a href="<%=MyCtrlCommand%>usUpdateForm&id=${sessionScope.loginfo.id}"><span
 							class="glyphicon glyphicon-user"></span>마이페이지</a></li>
 					<li><a href="<%=MyCtrlCommand%>usLogout"><span

@@ -59,7 +59,7 @@ public class Join03DAO extends SuperDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 
-		String sql = " select t.tname, m.mvid, m.mname, ps.playdate, ps.starttime, ps.psorder as 상영회차, t.startseat, t.endseat ";
+		String sql = " select t.tname, m.mvid, m.mname, ps.playdate, ps.starttime, ps.psorder as 상영회차, t.startseat, t.endseat, t.price ";
 		sql += " from (movies m inner join playschedules ps ";
 		sql += " on m.mvid = ps.mvid) inner join theathers t ";
 		sql += " on ps.tid= t.tid ";
@@ -85,6 +85,7 @@ public class Join03DAO extends SuperDAO {
 				bean.setPsorder(rs.getInt("상영회차"));
 				bean.setStartseat(rs.getInt("startseat"));
 				bean.setEndseat(rs.getInt("endseat"));
+				bean.setPrice(rs.getInt("price"));
 				joinlist.add(bean);
 			}
 
@@ -109,7 +110,7 @@ public class Join03DAO extends SuperDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 
-		String sql = " select t.tname, m.mvid, m.mname, ps.playdate, ps.starttime, ps.psorder as 상영회차, t.startseat, t.endseat ";
+		String sql = " select t.tname, m.mvid, m.mname, ps.playdate, ps.starttime, ps.psorder as 상영회차, t.startseat, t.endseat, t.price ";
 		sql += " from (movies m inner join playschedules ps ";
 		sql += " on m.mvid = ps.mvid) inner join theathers t ";
 		sql += " on ps.tid= t.tid ";
@@ -135,6 +136,7 @@ public class Join03DAO extends SuperDAO {
 				bean.setPsorder(rs.getInt("상영회차"));
 				bean.setStartseat(rs.getInt("startseat"));
 				bean.setEndseat(rs.getInt("endseat"));
+				bean.setPrice(rs.getInt("price"));
 			}
 
 		} catch (Exception e) {

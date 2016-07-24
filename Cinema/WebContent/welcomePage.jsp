@@ -28,19 +28,19 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox" align="center" >
       <div class="item active">
-        <img src="./MovieImage/컨저링2_po.JPG" alt="컨저링">
+        <img src="./MovieImage/jungle_po.jpg" alt="정글북">
       </div>
 
       <div class="item">
-        <img src="./MovieImage/나우유씨미2_po.JPG" alt="나우유씨미">
+        <img src="./MovieImage/conjuring2_po.jpg" alt="나우유씨미2">
       </div>
     
       <div class="item">
-        <img src="./MovieImage/아이스에이지_po.JPG" alt="아이스에이지">
+        <img src="./MovieImage/아이스에이지5_po.jpg" alt="아이스에이지5">
       </div>
 
       <div class="item">
-        <img src="./MovieImage/부산행_po.JPG" alt="고령화가족">
+        <img src="./MovieImage/부산행_po.jpg" alt="부산행">
       </div>
     </div>
 

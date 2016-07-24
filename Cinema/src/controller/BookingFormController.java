@@ -45,20 +45,6 @@ public class BookingFormController implements SuperController{
 		System.out.println(mvid);
 		System.out.println(psorder);
 		
-		//좌석정보
-		String[] _ch= request.getParameterValues("ch");
-		String s="";
-		if(_ch != null){
-			System.out.println("널이아니야");
-			String[] ch=new String[request.getParameterValues("ch").length];
-			
-
-			for(String c:ch)
-
-				s+=c+" ";
-		}
-		System.out.println(s);
-		
 		
 		List<Join03> j3lists = j3dao.SelectDataList(mvid);
 		
@@ -68,8 +54,6 @@ public class BookingFormController implements SuperController{
 		request.setAttribute("j3bean", j3bean);
 		request.setAttribute("mlists", mlists);
 		request.setAttribute("j3lists", j3lists);
-		
-		request.setAttribute("s", s);
 		
 //		HttpSession session = request.getSession();
 //		session.setAttribute("bean", session);

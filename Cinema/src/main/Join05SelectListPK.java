@@ -13,8 +13,10 @@ public class Join05SelectListPK {
 		System.out.println("시스템 가동 준비 완료");
 		
 		Join05DAO jdao = new Join05DAO();
-		String mname = "컨저링2";
-		List<Join05> joinList = jdao.SelectDataList(mname);
+		//String mname = "컨저링2";
+		int mvid = 2;
+		
+		List<Join05> joinList = jdao.SelectDataList(mvid);
 		
 		if(joinList.size() == 0){
 			

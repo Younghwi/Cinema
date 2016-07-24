@@ -11,5 +11,7 @@
 <br>
 <br><br>
 <%@include file="./welcomePage.jsp" %>
+
 </body>
+
 </html>

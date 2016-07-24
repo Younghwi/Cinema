@@ -6,7 +6,8 @@ public class CommentBean {
    private int mvid;         // 영화 고유번호
    private String comments;   // 한줄평
    private String writedate;   // 작성일자
-   private int startpoint;      // 별점
+   private int starpoint;      // 별점
+   
    public int getCno() {
       return cno;
    }
@@ -22,8 +23,8 @@ public class CommentBean {
    public String getWritedate() {
       return writedate;
    }
-   public int getStartpoint() {
-      return startpoint;
+   public int getStarpoint() {
+      return starpoint;
    }
    public void setCno(int cno) {
       this.cno = cno;
@@ -40,13 +41,13 @@ public class CommentBean {
    public void setWritedate(String writedate) {
       this.writedate = writedate;
    }
-   public void setStartpoint(int startpoint) {
-      this.startpoint = startpoint;
+   public void setStarpoint(int starpoint) {
+      this.starpoint = starpoint;
    }
    @Override
    public String toString() {
       return "CommentBean [cno=" + cno + ", mid=" + mid + ", mvid=" + mvid + ", comments=" + comments + ", writedate="
-            + writedate + ", startpoint=" + startpoint + "]";
+            + writedate + ", starpoint=" + starpoint + "]";
    }
    
 }

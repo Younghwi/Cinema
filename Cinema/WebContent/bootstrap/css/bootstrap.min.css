@@ -5,8 +5,36 @@
  */ /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
 .bookimage {
-	width: 100px;
-	height: 100px;
+	width: 150px;
+	height: 180px;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.movieImage{
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.mybtn{
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.panel-body .comment {
+	//background-color: blue;
+	
+}
+.panel-body .inputcomment {
+	//background-color: yellow;
+	
+}
+
+.container .row .col-md-4{
+	height: 250px;
 }
 
 html {

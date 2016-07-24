@@ -6,6 +6,8 @@ public class Join05 {
 	private String mid;
 	private String writedate;
 	private String comments;
+	private int starpoint;
+	
 	public String getMname() {
 		return mname;
 	}
@@ -30,12 +32,19 @@ public class Join05 {
 	public void setComments(String comments) {
 		this.comments = comments;
 	}
+	
+	public int getStarpoint() {
+		return starpoint;
+	}
+	public void setStarpoint(int starpoint) {
+		this.starpoint = starpoint;
+	}
 	@Override
 	public String toString() {
-		return "Join05 [mname=" + mname + ", mid=" + mid + ", writedate=" + writedate + ", comments=" + comments + "]";
+		return "Join05 [mname=" + mname + ", mid=" + mid + ", writedate=" + writedate + ", comments=" + comments
+				+ ", starpoint=" + starpoint + "]";
 	}
 
-	
 }
 
 

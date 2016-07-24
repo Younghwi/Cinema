@@ -2,9 +2,6 @@
 
     pageEncoding="UTF-8"%>
 
-
-
-
 <%
 String contextPath = request.getContextPath(); //현재 진행 중인 프로젝트 이름 
 String CommandName = "/CinemaCtrl"; //요청을 위한 url 패턴 이름
@@ -13,13 +10,9 @@ String MyCtrlCommand = contextPath + CommandName + "?command=";
 
 	request.setCharacterEncoding("utf-8");
 
-
-
-
     String _row=request.getParameter("row");
-
     String _col=request.getParameter("col");
-
+    int price = Integer.parseInt(request.getParameter("price"));
     
 
     int row=10, col=15;
@@ -117,11 +110,12 @@ function send() {
 	function get_chked_values(){
  		var f=document.forms[0];
 		var chked_val= '';
+		var cnt=0;
 		
 		$('.ch:checked').each(function(pi,po){
 
 		    chked_val += ','+po.value;
-
+			cnt++;
 		  });
 		
  		if(chked_val!=""){
@@ -131,6 +125,7 @@ function send() {
 		alert(chked_val); 
 		
 		opener.document.myform.seat.value = chked_val;
+		opener.document.myform.price.value = cnt*<%=price%>;
 		self.close();
 	}
 
