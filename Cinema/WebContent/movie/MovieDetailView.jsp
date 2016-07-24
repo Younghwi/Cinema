@@ -171,17 +171,13 @@ function starclick(value) {
 				<div class="col-sm-offset-1 col-sm-10 comment">
 				<hr>
 				<c:forEach var="bean" items="${requestScope.j5lists }">
-				<p><h5>작성자 : ${bean.mid }&nbsp;&nbsp;작성일자: ${bean.writedate }</h5>
+				<p><h5>작성자 : ${bean.mid }&nbsp;&nbsp;작성일자: ${bean.writedate }
 				<c:forEach begin="1" end="${bean.starpoint}">
-				<img src="http://image2.megabox.co.kr/mop/home/star_mid_on.png">
+				<img width="15" height="15" src="http://image2.megabox.co.kr/mop/home/star_mid_on.png">
 				</c:forEach >
-				<% Join05 imsi = (Join05)request.getAttribute("bean"); 
-				int star_off = 5-imsi.getStarpoint();
-				%>
-				<c:forEach begin="1" end="<%=star_off %>">
-				<img src="http://image2.megabox.co.kr/mop/home/star_mid_off.png">
-				</c:forEach>
-				</p>
+				<c:forEach begin="1" end="${5-bean.starpoint}">
+				<img width="15" height="15" src="http://image2.megabox.co.kr/mop/home/star_mid_off.png">
+				</c:forEach></h5></p>
 				<p><h4>한줄평 : ${bean.comments }</h4></p>
 				 <hr>
 				</c:forEach>
