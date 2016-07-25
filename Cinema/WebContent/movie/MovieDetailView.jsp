@@ -181,7 +181,11 @@ function starclick(value) {
 				<p><h4>한줄평 : ${bean.comments }</h4></p>
 				 <hr>
 				</c:forEach>
+				<div class="pageing" align="center">
+					${requestScope.pagingHtml}
 				</div>
+				</div>
+				<hr>
 				
 				
 			</div>
