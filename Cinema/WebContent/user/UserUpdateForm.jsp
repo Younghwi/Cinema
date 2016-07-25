@@ -104,7 +104,7 @@
 						<label for="zipcode" class="col-xs-<%=formleft%> col-lg-<%=formleft%> control-label">우편 번호</label>
 	        			<div class="col-xs-<%=formright-2%> col-lg-<%=formright-2%>">
 	            			<input type="text" name="fakezipcode" id="fakezipcode" class="form-control" disabled="disabled" placeholder="우편 번호" value="${requestScope.bean.zipcode}" >
-	            			<input type="hidden" name="zipcode" id="zipcode" value="" > 
+	            			<input type="hidden" name="zipcode" id="zipcode" value="${requestScope.bean.zipcode}" > 
 	        			</div>
 						<div class="col-xs-<%=2%> col-lg-<%=2%>" align="left">
 	            			<input type="button" class="btn btn-info" value="우편 번호 찾기" onclick="function2( );"> 
@@ -115,7 +115,7 @@
 						<label for="address1" class="col-xs-<%=formleft%> col-lg-<%=formleft%> control-label">주소</label>
 	        			<div class="col-xs-<%=formright%> col-lg-<%=formright%>">
 	            		    <input type="text" name="fakeaddress1" id="fakeaddress1" class="form-control" disabled="disabled" placeholder="주소" value="${requestScope.bean.address1}" >
-	            			<input type="hidden" name="address1" id="address1" value="" >
+	            			<input type="hidden" name="address1" id="address1" value="${requestScope.bean.address1}" >
 	            			<span class="err">${erraddress1}</span> 
 	        			</div>
 	        		</div>
