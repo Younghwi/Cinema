@@ -8,8 +8,9 @@
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
       width: 70%;
+      height:450px;
       margin: auto;
-  }
+  }  
   </style>
 </head>
 <body>
@@ -22,13 +23,14 @@
       <li class="item1 active"></li>
       <li class="item2"></li>
       <li class="item3"></li>
-      <li class="item4"></li>
+      <li class="item4"></li>      
+      <li class="item5"></li>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox" align="center" >
       <div class="item active">
-        <img src="./MovieImage/jungle_po.jpg" alt="정글북">
+        <img  src="./MovieImage/jungle_po.jpg" alt="정글북">
       </div>
 
       <div class="item">
@@ -41,6 +43,10 @@
 
       <div class="item">
         <img src="./MovieImage/부산행_po.jpg" alt="부산행">
+      </div>
+      
+      <div class="item">
+        <img src="./MovieImage/onepiece_po.jpg" alt="원피스">
       </div>
     </div>
 
@@ -73,6 +79,9 @@ $(document).ready(function(){
     });
     $(".item4").click(function(){
         $("#myCarousel").carousel(3);
+    });
+    $(".item5").click(function(){
+        $("#myCarousel").carousel(4);
     });
     
     // Enable Carousel Controls
