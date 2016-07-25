@@ -12,6 +12,7 @@
       margin: auto;
   }  
   </style>
+  <link href="bootstrap/css/my.css" rel="stylesheet" type=text/css>
 </head>
 <body>
 

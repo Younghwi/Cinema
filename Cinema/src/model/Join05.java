@@ -2,12 +2,19 @@ package model;
 
 public class Join05 {
 
+	private int cno;
 	private String mname;
 	private String mid;
 	private String writedate;
 	private String comments;
 	private int starpoint;
 	
+	public int getCno() {
+		return cno;
+	}
+	public void setCno(int cno) {
+		this.cno = cno;
+	}
 	public String getMname() {
 		return mname;
 	}
@@ -41,9 +48,11 @@ public class Join05 {
 	}
 	@Override
 	public String toString() {
-		return "Join05 [mname=" + mname + ", mid=" + mid + ", writedate=" + writedate + ", comments=" + comments
-				+ ", starpoint=" + starpoint + "]";
+		return "Join05 [cno=" + cno + ", mname=" + mname + ", mid=" + mid + ", writedate=" + writedate + ", comments="
+				+ comments + ", starpoint=" + starpoint + "]";
 	}
+
+	
 
 }
 
