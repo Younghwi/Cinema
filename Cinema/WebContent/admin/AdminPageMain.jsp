@@ -8,6 +8,17 @@
 <title>관리자 페이지</title>
 </head>
 <body>
-관리자 페이지예요!
+
+<br>
+<br>
+<br>
+관리자 페이지예요!<br><br>
+
+
+<a href="<%=MyCtrlCommand%>moInsert">영화정보 임력</a><br>
+<a href="#">상영스케줄 입력</a><br>
+<a href="<%=MyCtrlCommand%>usList">회원리스트보기</a><br>
+<a href="#">총 예매목록보기</a><br>
+
 </body>
 </html>
