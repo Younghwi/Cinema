@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div class=theaterIMG>
-			<h2 class=theatertext style="padding-top: 80px">1관&2관</h2>
+			<h2 class=theatertext style="padding-top: 720px">1관&2관</h2>
 			<img src="./Images/theather/1,2관.png" align="" alt="1,2관">
 			<h2 class=theatertext style="padding-top: 80px">3관&4관</h2>
 			<img src="./Images/theather/3,4관.png" align="" alt="3,4관">

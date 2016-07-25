@@ -50,13 +50,7 @@
 				<li><a href="<%=MyCtrlCommand%>bookingForm">예매하기</a></li>
 				<li><a href="<%=MyCtrlCommand%>moList">영화</a></li>
 				<li><a href="<%=MyCtrlCommand%>ttMain">영화관</a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">Contact <span class="caret"></span></a>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="#">만든이들</a></li>
-						<li><a href="#">도움주신분</a></li>
-						<li class="divider"></li>
-						<li><a href="#">테스트 뭐할까</a></li>
+				<li><a href="<%=MyCtrlCommand%>ctmain">Contact</a>
 					</ul></li>
 			</ul>
 			<!-- 
