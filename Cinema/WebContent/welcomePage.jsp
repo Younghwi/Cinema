@@ -95,4 +95,6 @@ $(document).ready(function(){
 </script>
 
 </body>
+
+<%@include file="./../footer.jsp"%>
 </html>

@@ -6757,7 +6757,7 @@ button.close {
 }
 
 .carousel-inner {
-	background-color : red;
+	background-color : #333333;
 	position: relative;
 	width: 100%;
 	overflow: hidden
