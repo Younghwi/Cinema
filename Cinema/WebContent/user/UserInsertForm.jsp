@@ -41,6 +41,7 @@
 </head>
 
 <body>
+<br><br><br>
 	<div id="main_container" align="center" 
 		class="container col-xs-offset-<%=myoffset%> col-lg-offset-<%=myoffset%> col-xs-<%=mywidth%> col-lg-<%=mywidth%>"> 
 		<h2>회원 가입 하기</h2>
