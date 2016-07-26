@@ -1,0 +1,65 @@
+@CHARSET "UTF-8";
+
+.CTmainimage1 {
+    position:relative;
+    float:left; /* optional */
+    padding-top: 150px;
+    padding-left: 150px;
+}
+
+.CTmaintext1 {
+    position:absolute;
+    top:80px; /* in conjunction with left property, decides the text position */
+    left:170px;
+    width:1000px; /* optional, though better have one */
+    color: gray;    
+    font-weight: 900;
+}
+
+.CTmainimage2 {
+    position:absolute;
+    float:left; /* optional */
+    padding-top: 150px;
+    padding-left: 370px;
+}
+
+.CTmaintext2 {
+    position:absolute;
+    top:80px; /* in conjunction with left property, decides the text position */
+    left:390px;
+    width:1000px; /* optional, though better have one */
+    color: gray;    
+    font-weight: 900;
+}
+
+.CTmainimage3 {
+    position:absolute;
+    float:left; /* optional */
+    padding-top: 150px;
+    padding-left: 620px;
+}
+
+.CTmaintext3{
+    position:absolute;
+    top:80px; /* in conjunction with left property, decides the text position */
+    left:640px;
+    width:1000px; /* optional, though better have one */
+    color: gray;    
+    font-weight: 900;
+}
+
+.CTmainimage4 {
+    position:absolute;
+    float:left; /* optional */
+    padding-top: 150px;
+    padding-left: 870px;
+}
+
+.CTmaintext4 {
+    position:absolute;
+    top:80px; /* in conjunction with left property, decides the text position */
+    left:890px;
+    width:1000px; /* optional, though better have one */
+    color: gray;    
+    font-weight: 900;
+}
