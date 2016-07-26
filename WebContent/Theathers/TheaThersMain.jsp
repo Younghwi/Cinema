@@ -22,12 +22,13 @@
 			</div>
 		</div>
 		<div class=theaterIMG>
-			<c:forEach var="bean" items="${requestScope.lists}">
-				<h2 class=theatertext style="padding-top: 80px">${bean.tname}</h2>
-				<img src="<%=realPath%>${bean.timage}" alt="${bean.timage}">
+			<c:forEach var="bean" items="${requestScope.lists}">				
+					<h2 class=theatertext style="padding-top: 80px">${bean.tname}</h2>
+					<img src="./Images/theather/${bean.timage}.png"
+						alt="${bean.timage}">
+			
 			</c:forEach>
 			<h2 class=theatertext style="padding-top: 80px"></h2>
-			
 		</div>
 	</div>
 </body>

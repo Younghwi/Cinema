@@ -4,7 +4,9 @@
 	position:relative;
     float:left; /* optional */
 }
-
+.text{
+	font-size: 10px;
+}
 .imgset .textset{
     position:absolute;
     top:0px;
@@ -23,5 +25,5 @@
     font-weight: 900;
 }
 .bodyset{
-	background-color: #333333;
+	background-color: #282828;
 }

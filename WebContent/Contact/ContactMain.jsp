@@ -43,5 +43,6 @@
 </div>
 		<h2 class=theatertext style="padding-top: 500px"></h2>
 </body>
-<%@include file="./../footer.jsp"%>
 </html>
+
+<%@include file="./../footer.jsp"%>
