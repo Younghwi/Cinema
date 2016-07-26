@@ -26,7 +26,7 @@
 .CTmaintext2 {
     position:absolute;
     top:80px; /* in conjunction with left property, decides the text position */
-    left:340px;
+    left:360px;
     width:1000px; /* optional, though better have one */
     color: gray;    
     font-weight: 900;
@@ -42,7 +42,7 @@
 .CTmaintext3{
     position:absolute;
     top:80px; /* in conjunction with left property, decides the text position */
-    left:590px;
+    left:605px;
     width:1000px; /* optional, though better have one */
     color: gray;    
     font-weight: 900;
@@ -58,7 +58,7 @@
 .CTmaintext4 {
     position:absolute;
     top:80px; /* in conjunction with left property, decides the text position */
-    left:840px;
+    left:850px;
     width:1000px; /* optional, though better have one */
     color: gray;    
     font-weight: 900;
